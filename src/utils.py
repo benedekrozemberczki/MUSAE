@@ -31,6 +31,8 @@ def load_graph(graph_path):
 
 def load_features(features_path):
     """
+    :param :
+    :return :
     """
     features = json.load(open(features_path))
     features = {str(k): [str(val) for val in v] for k,v in features.items()}
@@ -38,6 +40,9 @@ def load_features(features_path):
 
 def create_documents(features):
     """
+    
+    :param :
+    :return :
     """
     docs = [TaggedDocument(words = v, tags = [str(k)]) for k, v in features.items()]
     return docs
