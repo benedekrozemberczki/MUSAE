@@ -85,7 +85,7 @@ Learning of the embedding is handled by the `src/main.py` script which provides 
   --Q          FLOAT       In-out hyperparameter for second-order walk.     Default is 1.0.
 ```
 
-#### Skip-Gram options
+#### Model options
 
 ```
   --dimensions               INT        Number of dimensions.                              Default is 16.
@@ -94,14 +94,9 @@ Learning of the embedding is handled by the `src/main.py` script which provides 
   --window-size              INT        Window size for proximity statistic extraction.    Default is 5.
   --distortion               FLOAT      Downsampling distortion.                           Default is 0.75.
   --negative-sample-number   INT        Number of negative samples to draw.                Default is 10.
-```
-
-#### Model options
-
-```
-  --initial-learning-rate   FLOAT    Initial learning rate.                                        Default is 0.001.
-  --minimal-learning-rate   FLOAT    Final learning rate.                                          Default is 0.0001.
-  --annealing-factor        FLOAT    Annealing factor for learning rate.                           Default is 1.0.
+  --alpha   FLOAT    Initial learning rate.                                        Default is 0.001.
+  --min-alpha   FLOAT    Final learning rate.                                          Default is 0.0001.
+  --epochs        FLOAT    Annealing factor for learning rate.                           Default is 1.0.
   --initial-gamma           FLOAT    Initial clustering weight coefficient.                        Default is 0.1.
   --lambd                   FLOAT    Smoothness regularization penalty.                            Default is 0.0625.
   --cluster-number          INT      Number of clusters.                                           Default is 20.
