@@ -4,7 +4,7 @@ from parser import parameter_parser
 
 def main(args):
     """
-    Multi-scale attributed node embedding machine calling wrapper
+    Multi-scale attributed node embedding machine calling wrapper.
     :param args: Arguments object parsed up.
     """
     model = MUSAE(args)
