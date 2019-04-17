@@ -62,17 +62,17 @@ def parameter_parser():
     parser.add_argument('--P',
                         type = float,
                         default = 1.0,
-	                help = 'Number of walks. Default is 1.0.')
+	                help = 'Return hyperparameter. Default is 1.0.')
 
     parser.add_argument('--Q',
                         type = float,
                         default = 1.0,
-	                help = 'Number of walks. Default is 1.0.')
+	                help = 'In-out hyperparameter. Default is 1.0.')
 
     parser.add_argument('--down-sampling',
                         type = float,
                         default = 0.001,
-	                help = 'Number of walks. Default is 0.001.')
+	                help = 'Down-sampling rate. Default is 0.001.')
 
     parser.add_argument('--exponent',
                         type = float,
@@ -84,7 +84,7 @@ def parameter_parser():
                         default = 0.05,
 	                help = 'Number of walks. Default is 0.05.')
 
-    parser.add_argument('--min_alpha',
+    parser.add_argument('--min-alpha',
                         type = float,
                         default = 0.025,
 	                help = 'Number of walks. Default is 0.025.')
