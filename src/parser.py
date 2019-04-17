@@ -47,12 +47,12 @@ def parameter_parser():
     parser.add_argument('--base-model',
                         nargs = '?',
                         default = 'null',
-	                help = 'Fit base embedding. Default is null.')
+	                help = 'Fit base embedding. Default is NULL.')
 
     parser.add_argument('--model',
                         nargs = '?',
                         default = 'musae',
-	                help = 'Random walk order.')
+	                help = 'Attributed embedding type. Default is MUSAE.')
 
     parser.add_argument('--sampling',
                         nargs = '?',
