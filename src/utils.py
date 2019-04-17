@@ -41,9 +41,9 @@ def load_features(features_path):
 
 def create_documents(features):
     """
-    
-    :param :
-    :return :
+    From a feature hash create a list of TaggedDocuments.
+    :param features: Feature hash table - keys are nodes, values are feature lists.
+    :return docs: Tagged Documents list.
     """
     docs = [TaggedDocument(words = v, tags = [str(k)]) for k, v in features.items()]
     return docs
