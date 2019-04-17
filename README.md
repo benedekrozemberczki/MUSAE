@@ -56,8 +56,8 @@ The models are defined in a way that parameter settings and runtimes are logged.
 
 ```
 1. Hyperparameter settings.     We save each hyperparameter used in the experiment.
-2. Optimization runtime.        We measure the time needed for optimization -- measured by seconds.
-3. Sampling runtime.            We measure the time needed for sampling -- measured by seconds.
+2. Optimization runtime.        We measure the time needed for optimization - measured by seconds.
+3. Sampling runtime.            We measure the time needed for sampling - measured by seconds.
 ```
 
 ### Options
