@@ -87,18 +87,6 @@ Learning of the embedding is handled by the `src/main.py` script which provides 
 ```
   --dimensions               INT        Number of dimensions.                              Default is 32.
   --random-walk-length       INT        Length of random walk per source.                  Default is 80.
-  --num-of-walks             INT        Number of random walks per source.                 Default is 5.
-  --window-size              INT        Window size for proximity statistic extraction.    Default is 5.
-  --distortion               FLOAT      Downsampling distortion.                           Default is 0.75.
-  --negative-sample-number   INT        Number of negative samples to draw.                Default is 10.
-  --alpha   FLOAT    Initial learning rate.                                        Default is 0.001.
-  --min-alpha   FLOAT    Final learning rate.                                          Default is 0.0001.
-  --epochs        FLOAT    Annealing factor for learning rate.                           Default is 1.0.
-  --initial-gamma           FLOAT    Initial clustering weight coefficient.                        Default is 0.1.
-  --lambd                   FLOAT    Smoothness regularization penalty.                            Default is 0.0625.
-  --cluster-number          INT      Number of clusters.                                           Default is 20.
-  --overlap-weighting       STR      Weight construction technique for regularization.             Default is `normalized_overlap`.
-  --regularization-noise    FLOAT    Uniform noise max and min on the feature vector distance.     Default is 10**-8.
 ```
 
 ### Examples
