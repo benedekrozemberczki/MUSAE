@@ -102,7 +102,7 @@ def parameter_parser():
     parser.add_argument('--negative-samples',
                         type = int,
                         default = 5,
-	                help = 'Number of neighbor embeddings. Default is 5.')
+	                help = 'Number of negative samples. Default is 5.')
 
     parser.add_argument('--workers',
                         type = int,
