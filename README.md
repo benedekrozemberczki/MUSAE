@@ -46,6 +46,7 @@ pandas            0.23.4
 texttable         1.5.0
 scipy             1.1.0
 argparse          1.1.0
+gensim            3.6.0
 ```
 ### Datasets
 
