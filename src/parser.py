@@ -47,7 +47,7 @@ def parameter_parser():
     parser.add_argument('--base-model',
                         nargs = '?',
                         default = 'null',
-	                help = 'Fit base embedding.')
+	                help = 'Fit base embedding. Default is null.')
 
     parser.add_argument('--model',
                         nargs = '?',
