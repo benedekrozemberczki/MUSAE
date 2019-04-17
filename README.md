@@ -10,8 +10,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 This repository provides a Gensim implementation of MUSAE and AE as described in the paper:
 > Jump Around! Multi-scale Attributed Node Embedding.
 > Benedek Rozemberczki, Carl Allen and Rik Sarkar.
-> ICLR, 2019.
-> [[Paper]](https://openreview.net/forum?id=Byl8BnRcYm)
+> Arxiv, 2019.
+> [[Paper]](https://benito.hu)
 
 ### Requirements
 The codebase is implemented in Python 3.5.2. package versions used for development are just below.
