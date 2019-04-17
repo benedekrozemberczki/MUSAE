@@ -57,7 +57,7 @@ def parameter_parser():
     parser.add_argument('--sampling',
                         nargs = '?',
                         default = 'first',
-	                help = 'Random walk order.')
+	                help = 'Random walk order. Default is first.')
 
     parser.add_argument('--P',
                         type = float,
