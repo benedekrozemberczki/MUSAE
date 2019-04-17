@@ -75,11 +75,11 @@ Learning of the embedding is handled by the `src/main.py` script which provides 
 #### Random walk options
 
 ```
-  --sampling     STR         Random walker order (first/second).              Default is `first`.
-  --P            FLOAT       Return hyperparameter for second-order walk.     Default is 1.0
-  --Q            FLOAT       In-out hyperparameter for second-order walk.     Default is 1.0.
-  --walk-number  INT         Walks per source node.                           Default is 5.
-  --walk-length  INT         Truncated random walk length.                    Default is 80.
+  --sampling      STR       Random walker order (first/second).              Default is `first`.
+  --P             FLOAT     Return hyperparameter for second-order walk.     Default is 1.0
+  --Q             FLOAT     In-out hyperparameter for second-order walk.     Default is 1.0.
+  --walk-number   INT       Walks per source node.                           Default is 5.
+  --walk-length   INT       Truncated random walk length.                    Default is 80.
 ```
 
 #### Model options
