@@ -7,7 +7,7 @@ The reference implementation of "Jump Around! Multi-scale Attributed Node Embedd
 <p align="justify">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi tristique senectus et netus et malesuada fames ac turpis. A lacus vestibulum sed arcu non odio euismod lacinia at. Consectetur lorem donec massa sapien faucibus et molestie. Risus nullam eget felis eget. Quisque egestas diam in arcu cursus. Facilisis gravida neque convallis a cras semper. Sed augue lacus viverra vitae congue. Convallis tellus id interdum velit. Non nisi est sit amet. Id porta nibh venenatis cras sed felis eget velit aliquet. Odio eu feugiat pretium nibh. Non tellus orci ac auctor. Nibh ipsum consequat nisl vel pretium lectus quam id leo. Volutpat ac tincidunt vitae semper quis lectus nulla at. Dui ut ornare lectus sit amet est placerat in.</p>
 
-The second-order random walks sampling methods were taken from the reference implementation of [Node2vec]
+The second-order random walks sampling methods were taken from the reference implementation of [Node2vec](https://github.com/aditya-grover/node2vec).
 
 This repository provides a Gensim implementation of MUSAE and AE as described in the paper:
 > Jump Around! Multi-scale Attributed Node Embedding.
