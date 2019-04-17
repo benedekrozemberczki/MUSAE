@@ -1,20 +1,18 @@
 import argparse
 
 def parameter_parser():
-
     """
-    A method to parse up command line parameters. By default it gives an embedding of the Wikipedia Chameleons dataset.
+    A method to parse up command line parameters. 
+    By default it gives an embedding of the Wikipedia Chameleons dataset.
     The default hyperparameters give a good quality representation without grid search.
     Representations are sorted by ID.
     """
-
     parser = argparse.ArgumentParser(description = "Run MUSAE/AE.")
-
 
     parser.add_argument('--graph-input',
                         nargs = '?',
                         default = "./input/edges/chameleon_edges.csv",
-	                help = 'Input folder with jsons.')
+	                help = 'Input edge list csv.')
 
     parser.add_argument('--features-input',
                         nargs = '?',
