@@ -17,7 +17,7 @@ def parameter_parser():
     parser.add_argument('--features-input',
                         nargs = '?',
                         default = "./input/features/chameleon_features.json",
-	                help = 'Input folder with jsons.')
+	                help = 'Input features json.')
 
     parser.add_argument('--output',
                         nargs = '?',
