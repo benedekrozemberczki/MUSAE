@@ -31,8 +31,9 @@ def load_graph(graph_path):
 
 def load_features(features_path):
     """
-    :param :
-    :return :
+    Reading the features from disk.
+    :param features_path: Location of feature JSON.
+    :return features: Feature hash table.
     """
     features = json.load(open(features_path))
     features = {str(k): [str(val) for val in v] for k,v in features.items()}
