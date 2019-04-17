@@ -85,18 +85,18 @@ Learning of the embedding is handled by the `src/main.py` script which provides 
 #### Model options
 
 ```
-  --model                 STR
-  --base-model            STR
-  --approximation-order   INT
-  --dimensions            INT        Number of dimensions.                              Default is 32.
-  --down-sampling         FLOAT        Length of random walk per source.                  Default is 80.
-  --exponent              FLOAT
-  --alpha                 FLOAT
-  --min-alpha             FLOAT
-  --min-count             INT
-  --negative-samples      INT
-  --workers               INT
-  --epochs                INT
+  --model                 STR        Pooled or multi-scla model (AE/MUSAE).       Default is `musae`.
+  --base-model            STR        Use of Doc2Vec base model.                   Default is `null`.
+  --approximation-order   INT        Matrix powers approximated.                  Default is 3.
+  --dimensions            INT        Number of dimensions.                        Default is 32.
+  --down-sampling         FLOAT      Length of random walk per source.            Default is 0.001.
+  --exponent              FLOAT      Downsampling exponent of frequency.          Default is 0.75.
+  --alpha                 FLOAT      Initial learning rate.                       Default is 0.05.
+  --min-alpha             FLOAT      Final learning rate.                         Default is 0.025.
+  --min-count             INT        Minimal occurence of features.               Default is 1.
+  --negative-samples      INT        Number of negative samples per node.         Default is 5.
+  --workers               INT        Number of cores used for optimization.       Default is 4.
+  --epochs                INT        Gradient descent epochs.                     Default is 5.
 ```
 
 ### Examples
