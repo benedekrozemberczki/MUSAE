@@ -82,12 +82,12 @@ def parameter_parser():
     parser.add_argument('--alpha',
                         type = float,
                         default = 0.05,
-	                help = 'Number of walks. Default is 0.05.')
+	                help = 'Start learning rate. Default is 0.05.')
 
     parser.add_argument('--min-alpha',
                         type = float,
                         default = 0.025,
-	                help = 'Number of walks. Default is 0.025.')
+	                help = 'Final learning rate. Default is 0.025.')
 
     parser.add_argument('--approximation-order',
                         type = int,
