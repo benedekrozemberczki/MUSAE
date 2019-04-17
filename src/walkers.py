@@ -1,7 +1,7 @@
+import random
+import numpy as np
 import networkx as nx
 from tqdm import tqdm
-import numpy as np
-import random
 from tqdm import trange
 
 class SecondOrderRandomWalker:
