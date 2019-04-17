@@ -48,51 +48,72 @@ scipy             1.1.0
 argparse          1.1.0
 ```
 ### Datasets
-The code takes graphs for training from an input folder where each graph is stored as a JSON. Graphs used for testing are also stored as JSON files. Every node id and node label has to be indexed from 0. Keys of dictionaries are stored strings in order to make JSON serialization possible.
 
-Every JSON file has the following key-value structure:
+### Logging
 
-```javascript
-{"edges": [[0, 1],[1, 2],[2, 3],[3, 4]],
- "labels": {"0": "A", "1": "B", "2": "C", "3": "A", "4": "B"},
- "target": 1}
+The models are defined in a way that parameter settings and cluster quality is logged in every single epoch. Specifically we log the followings:
+
 ```
-The **edges** key has an edge list value which descibes the connectivity structure. The **labels** key has labels for each node which are stored as a dictionary -- within this nested dictionary labels are values, node identifiers are keys. The **target** key has an integer value which is the class membership.
-
-### Outputs
-
-The predictions are saved in the `output/` directory. Each embedding has a header and a column with the graph identifiers. Finally, the predictions are sorted by the identifier column.
+1. Hyperparameter settings.     We save each hyperparameter used in the experiment.
+2. Cost per epoch.              Embedding, clustering and regularization cost are stored depending on the model type.
+3. Cluster quality.             Measured by modularity. We calculate it both for the classical and neural clusterings per epoch.
+4. Runtime.                     We measure the time needed for optimization and data generation per epoch -- measured by seconds.
+```
 
 ### Options
-Training a CapsGNN model is handled by the `src/main.py` script which provides the following command line arguments.
+
+Learning of the embedding is handled by the `src/embedding_clustering.py` script which provides the following command line arguments.
 
 #### Input and output options
+
 ```
-  --training-graphs   STR    Training graphs folder.      Default is `dataset/train/`.
-  --testing-graphs    STR    Testing graphs folder.       Default is `dataset/test/`.
-  --prediction-path   STR    Output predictions file.     Default is `output/watts_predictions.csv`.
+  --input                STR      Input graph path.                              Default is `data/politician_edges.csv`.
+  --embedding-output     STR      Embeddings path.                               Default is `output/embeddings/politician_embedding.csv`.
+  --cluster-mean-output  STR      Cluster centers path.                          Default is `output/cluster_means/politician_means.csv`.
+  --log-output           STR      Log path.                                      Default is `output/logs/politician.log`.
+  --assignment-output    STR      Node-cluster assignment dictionary path.       Default is `output/assignments/politician.json`.
+  --dump-matrices        BOOL     Whether the trained model should be saved.     Default is `True`.
+  --model                STR      The model type.                                Default is `GEMSECWithRegularization`.
 ```
+
+
+#### Random walk options
+
+```
+  --walker   STR         Random walker order (first/second).              Default is `first`.
+  --P        FLOAT       Return hyperparameter for second-order walk.     Default is 1.0
+  --Q        FLOAT       In-out hyperparameter for second-order walk.     Default is 1.0.
+```
+
+#### Skipgram options
+
+```
+  --dimensions               INT        Number of dimensions.                              Default is 16.
+  --random-walk-length       INT        Length of random walk per source.                  Default is 80.
+  --num-of-walks             INT        Number of random walks per source.                 Default is 5.
+  --window-size              INT        Window size for proximity statistic extraction.    Default is 5.
+  --distortion               FLOAT      Downsampling distortion.                           Default is 0.75.
+  --negative-sample-number   INT        Number of negative samples to draw.                Default is 10.
+```
+
 #### Model options
+
 ```
-  --epochs                      INT     Number of epochs.                  Default is 10.
-  --batch-size                  INT     Number fo graphs per batch.        Default is 8.
-  --gcn-filters                 INT     Number of filters in GCNs.         Default is 2.
-  --gcn-layers                  INT     Number of GCNs chained together.   Default is 5.
-  --inner-attention-dimension   INT     Number of neurons in attention.    Default is 20.  
-  --capsule-dimensions          INT     Number of capsule neurons.         Default is 8.
-  --number-of-capsules          INT     Number of capsules in layer.       Default is 8.
-  --weight-decay                FLOAT   Weight decay of Adam.              Defatuls is 10^-6.
-  --lambd                       FLOAT   Regularization parameter.          Default is 1.0.
-  --learning-rate               FLOAT   Adam learning rate.                Default is 0.01.
+  --initial-learning-rate   FLOAT    Initial learning rate.                                        Default is 0.001.
+  --minimal-learning-rate   FLOAT    Final learning rate.                                          Default is 0.0001.
+  --annealing-factor        FLOAT    Annealing factor for learning rate.                           Default is 1.0.
+  --initial-gamma           FLOAT    Initial clustering weight coefficient.                        Default is 0.1.
+  --lambd                   FLOAT    Smoothness regularization penalty.                            Default is 0.0625.
+  --cluster-number          INT      Number of clusters.                                           Default is 20.
+  --overlap-weighting       STR      Weight construction technique for regularization.             Default is `normalized_overlap`.
+  --regularization-noise    FLOAT    Uniform noise max and min on the feature vector distance.     Default is 10**-8.
 ```
+
 ### Examples
-The following commands learn a model and save the predictions. Training a model on the default dataset:
-```
-python src/main.py
-```
 <p align="center">
   <img width="500" src="musae.gif">
 </p>
+
 
 Training a CapsGNNN model for a 100 epochs.
 ```
