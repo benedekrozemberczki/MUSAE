@@ -18,8 +18,9 @@ def tab_printer(args):
 
 def load_graph(graph_path):
     """
-    :param graph_path:
-    :return graph:
+    Reading a NetworkX graph.
+    :param graph_path: Path to the edge list.
+    :return graph: NetworkX object.
     """
     data = pd.read_csv(graph_path)
     edges = data.values.tolist()
