@@ -37,6 +37,4 @@ def create_documents(features):
     """
     """
     docs = [TaggedDocument(words = v, tags = [str(k)]) for k, v in features.items()]
-
     return docs
-
