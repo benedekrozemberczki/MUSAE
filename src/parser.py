@@ -27,12 +27,12 @@ def parameter_parser():
     parser.add_argument('--log',
                         nargs = '?',
                         default = './logs/chameleon.json',
-	                help = 'Embeddings path.')
+	                help = 'log  path.')
 
     parser.add_argument('--dimensions',
                         type = int,
                         default = 24,
-	                help = 'Number of dimensions. Default is 16.')
+	                help = 'Number of dimensions. Default is 32.')
 
     parser.add_argument('--walk-number',
                         type = int,
