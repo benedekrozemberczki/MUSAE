@@ -55,9 +55,7 @@ The models are defined in a way that parameter settings and cluster quality is l
 
 ```
 1. Hyperparameter settings.     We save each hyperparameter used in the experiment.
-2. Cost per epoch.              Embedding, clustering and regularization cost are stored depending on the model type.
-3. Cluster quality.             Measured by modularity. We calculate it both for the classical and neural clusterings per epoch.
-4. Runtime.                     We measure the time needed for optimization and data generation per epoch -- measured by seconds.
+2. Optimization runtime.        We measure the time needed for optimization -- measured by seconds.
 ```
 
 ### Options
