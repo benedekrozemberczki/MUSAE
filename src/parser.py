@@ -47,7 +47,7 @@ def parameter_parser():
     parser.add_argument('--base-model',
                         nargs = '?',
                         default = 'null',
-	                help = 'Random walk order.')
+	                help = 'Fit base embedding.')
 
     parser.add_argument('--model',
                         nargs = '?',
