@@ -7,10 +7,10 @@ The reference implementation of "Jump Around! Multi-scale Attributed Node Embedd
 <p align="justify">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi tristique senectus et netus et malesuada fames ac turpis. A lacus vestibulum sed arcu non odio euismod lacinia at. Consectetur lorem donec massa sapien faucibus et molestie. Risus nullam eget felis eget. Quisque egestas diam in arcu cursus. Facilisis gravida neque convallis a cras semper. Sed augue lacus viverra vitae congue. Convallis tellus id interdum velit. Non nisi est sit amet. Id porta nibh venenatis cras sed felis eget velit aliquet. Odio eu feugiat pretium nibh. Non tellus orci ac auctor. Nibh ipsum consequat nisl vel pretium lectus quam id leo. Volutpat ac tincidunt vitae semper quis lectus nulla at. Dui ut ornare lectus sit amet est placerat in.</p>
 
-This repository provides a PyTorch implementation of MUSAE and AE as described in the paper:
+This repository provides a Gensim implementation of MUSAE and AE as described in the paper:
 
-> Capsule Graph Neural Network.
-> Zhang Xinyi, Lihui Chen.
+> Jump Around! Multi-scale Attributed Node Embedding.
+> Benedek Rozemberczki, Carl Allen and Rik Sarkar.
 > ICLR, 2019.
 > [[Paper]](https://openreview.net/forum?id=Byl8BnRcYm)
 
@@ -69,7 +69,7 @@ The following commands learn a model and save the predictions. Training a model 
 python src/main.py
 ```
 <p align="center">
-  <img width="500" src="capsgnn.gif">
+  <img width="500" src="musae.gif">
 </p>
 
 Training a CapsGNNN model for a 100 epochs.
