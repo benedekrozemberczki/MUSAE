@@ -77,7 +77,7 @@ def parameter_parser():
     parser.add_argument('--exponent',
                         type = float,
                         default = 0.75,
-	                help = 'Number of walks. Default is 0.001.')
+	                help = 'Frequency sampling exponent. Default is 0.75.')
 
     parser.add_argument('--alpha',
                         type = float,
@@ -92,12 +92,12 @@ def parameter_parser():
     parser.add_argument('--approximation-order',
                         type = int,
                         default = 3,
-	                help = 'Number of neighbor embeddings. Default is 3.')
+	                help = 'Number of adjacency matrix powers. Default is 3.')
 
     parser.add_argument('--min-count',
                         type = int,
                         default = 1,
-	                help = 'Number of neighbor embeddings. Default is 3.')
+	                help = 'Minimal count. Default is 3.')
 
     parser.add_argument('--negative-samples',
                         type = int,
