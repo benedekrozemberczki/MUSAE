@@ -85,8 +85,18 @@ Learning of the embedding is handled by the `src/main.py` script which provides 
 #### Model options
 
 ```
-  --dimensions               INT        Number of dimensions.                              Default is 32.
-  --random-walk-length       INT        Length of random walk per source.                  Default is 80.
+  --model                 STR
+  --base-model            STR
+  --approximation-order   INT
+  --dimensions            INT        Number of dimensions.                              Default is 32.
+  --down-sampling         FLOAT        Length of random walk per source.                  Default is 80.
+  --exponent              FLOAT
+  --alpha                 FLOAT
+  --min-alpha             FLOAT
+  --min-count             INT
+  --negative-samples      INT
+  --workers               INT
+  --epochs                INT
 ```
 
 ### Examples
