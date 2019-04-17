@@ -1,6 +1,7 @@
-from parser import parameter_parser
 from musae import MUSAE
 from utils import tab_printer
+from parser import parameter_parser
+
 def main(args):
     """
     Multi-scale attributed node embedding machine calling wrapper
