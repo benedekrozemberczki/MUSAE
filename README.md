@@ -105,11 +105,11 @@ Learning of the embedding is handled by the `src/main.py` script which provides 
 </p>
 
 
-Training a CapsGNNN model for a 100 epochs.
+Training a MUSAE model for a 10 epochs.
 ```
-python src/main.py --epochs 100
+python src/main.py --epochs 10
 ```
-Changing the batch size.
+Changing the dimension size.
 ```
-python src/main.py --batch-size 128
+python src/main.py --dimensions 32
 ```
