@@ -7,11 +7,34 @@ The reference implementation of "Jump Around! Multi-scale Attributed Node Embedd
 <p align="justify">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi tristique senectus et netus et malesuada fames ac turpis. A lacus vestibulum sed arcu non odio euismod lacinia at. Consectetur lorem donec massa sapien faucibus et molestie. Risus nullam eget felis eget. Quisque egestas diam in arcu cursus. Facilisis gravida neque convallis a cras semper. Sed augue lacus viverra vitae congue. Convallis tellus id interdum velit. Non nisi est sit amet. Id porta nibh venenatis cras sed felis eget velit aliquet. Odio eu feugiat pretium nibh. Non tellus orci ac auctor. Nibh ipsum consequat nisl vel pretium lectus quam id leo. Volutpat ac tincidunt vitae semper quis lectus nulla at. Dui ut ornare lectus sit amet est placerat in.</p>
 
+The second-order random walks sampling methods were taken from the reference implementation of [Node2vec]
+
 This repository provides a Gensim implementation of MUSAE and AE as described in the paper:
 > Jump Around! Multi-scale Attributed Node Embedding.
 > Benedek Rozemberczki, Carl Allen and Rik Sarkar.
 > Arxiv, 2019.
 > [[Paper]](https://benito.hu)
+
+
+### Table of Contents
+
+1. [Citing](#citing)  
+2. [Requirements](#requirements)
+3. [Datasets](#datasets)  
+4. [Logging](#logging)  
+5. [Options](#options) 
+6. [Examples](#examples)
+
+### Citing
+
+If you find MUSAE useful in your research, please consider citing the following paper:
+
+>@misc{1802.03997,    
+       author = {Benedek Rozemberczki and Ryan Davies and Rik Sarkar and Charles Sutton},    
+       title = {GEMSEC: Graph Embedding with Self Clustering},   
+       year = {2018},    
+       eprint = {arXiv:1802.03997}
+       }
 
 ### Requirements
 The codebase is implemented in Python 3.5.2. package versions used for development are just below.
