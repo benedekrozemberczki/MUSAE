@@ -27,11 +27,11 @@ def parameter_parser():
     parser.add_argument('--log',
                         nargs = '?',
                         default = './logs/chameleon.json',
-	                help = 'log  path.')
+	                help = 'Log  path.')
 
     parser.add_argument('--dimensions',
                         type = int,
-                        default = 24,
+                        default = 32,
 	                help = 'Number of dimensions. Default is 32.')
 
     parser.add_argument('--walk-number',
