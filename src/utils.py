@@ -18,6 +18,8 @@ def tab_printer(args):
 
 def load_graph(graph_path):
     """
+    :param graph_path:
+    :return graph:
     """
     data = pd.read_csv(graph_path)
     edges = data.values.tolist()
