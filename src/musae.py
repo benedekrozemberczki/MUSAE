@@ -108,6 +108,9 @@ class MUSAE:
         print("\nApproximation order: " + str(approximation + 1) + ".\n")
 
     def _learn_musae_embedding(self):
+        """
+        Learning MUSAE embeddings up to the approximation order.
+        """
         for approximation in range(self.args.approximation_order):
             self._print_approximation_order(approximation)
             features = self._setup_musae_features(approximation+1)
