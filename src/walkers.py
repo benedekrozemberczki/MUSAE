@@ -139,7 +139,6 @@ def alias_setup(probs):
     while len(smaller) > 0 and len(larger) > 0:
         small = smaller.pop()
         large = larger.pop()
-
         J[small] = large
         q[large] = q[large] + q[small] - 1.0
         if q[large] < 1.0:
@@ -163,8 +162,15 @@ def alias_draw(J, q):
 
 
 class FirstOrderRandomWalker:
+    """
+    First-order random walk class.
+    """
     def __init__(self, G, num_walks, walk_length):
-
+        """
+        :param G: NetworkX object.
+        :param num_walks: Number of walks per node.
+        :param walk_length: Random walk length.
+        """
         self.G = G
         self.num_walks = num_walks
         self.walk_length = walk_length
