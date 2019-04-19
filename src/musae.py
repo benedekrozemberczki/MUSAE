@@ -84,7 +84,8 @@ class MUSAE:
 
     def _setup_ae_features(self):
         """
-         Create AE feature set.
+        Create AE feature set.
+        :return features: Feature set hash table.
         """
         features = {str(node):[] for node in self.graph.nodes()}
         print("Processing attributed walks.")
