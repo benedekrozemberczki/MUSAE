@@ -100,7 +100,11 @@ class MUSAE:
         features = {str(node): [feature for feature_elems in feature_set for feature in feature_elems] for node, feature_set in tqdm(features.items(), total = len(features))}
         return features
 
-    def _print_approximation_order(self,approximation):
+    def _print_approximation_order(self, approximation):
+        """
+        Nice printing ofapproximation order for MUSAE.
+        :param approximation: Approximation order.
+        """
         print("\nApproximation order: " + str(approximation + 1) + ".\n")
 
     def _learn_musae_embedding(self):
