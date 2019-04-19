@@ -111,6 +111,9 @@ class MUSAE:
             self.embeddings.append(embedding)
 
     def _learn_ae_embedding(self):
+        """
+        Learning an AE embedding.
+        """
         features = self._setup_ae_features()
         embedding = self._create_single_embedding(features)
         self.embeddings.append(embedding)
