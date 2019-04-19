@@ -41,8 +41,11 @@ class MUSAE:
 
     def _create_single_embedding(self, features):
         """
+        Learning an embedding from a feature hash table.
+        :param features: A hash table with node keys and feature list values.
+        :return embedding: Numpy array of embedding.
         """
-        print("\nLearning embedding.")
+        print("\nLearning the embedding.")
         document_collections = create_documents(features)
         
         model = Doc2Vec(document_collections,
@@ -63,7 +66,7 @@ class MUSAE:
 
     def _setup_musae_features(self, approximation):
         """
-
+        Creating MUSAE feature set.
         """
         features = {str(node):[] for node in self.graph.nodes()}
         print("Processing attributed walks.")
