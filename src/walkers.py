@@ -6,8 +6,20 @@ from tqdm import trange
 
 class SecondOrderRandomWalker:
     """
+    Second-order random walk class.
+    Taken from the original Node2Vec implementation.
+    For details see:
+    https://www.youtube.com/watch?v=1_QH5BEP5BM
+    https://arxiv.org/abs/1607.00653?context=cs
     """
     def __init__(self, G, p, q, num_walks, walk_length):
+        """
+        :param G: NetworkX graph object.
+        :param p:
+        :param q:
+        :param num_walks: Number of walks per source node.
+        :param walk_length: Random walk length.
+        """
         self.G = G
         self.nodes = nx.nodes(self.G)
         print("Edge weighting.\n")
