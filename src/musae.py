@@ -67,6 +67,8 @@ class MUSAE:
     def _setup_musae_features(self, approximation):
         """
         Creating MUSAE feature set.
+        :param approximation: Approximation-order.
+        :return features: Feature hash-table.
         """
         features = {str(node):[] for node in self.graph.nodes()}
         print("Processing attributed walks.")
@@ -82,7 +84,7 @@ class MUSAE:
 
     def _setup_ae_features(self):
         """
-
+         Create AE feature set.
         """
         features = {str(node):[] for node in self.graph.nodes()}
         print("Processing attributed walks.")
