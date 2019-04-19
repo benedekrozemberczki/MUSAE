@@ -124,6 +124,7 @@ class MUSAE:
 
     def learn_embedding(self):
         """
+        Learning the embeddings and measuring optimization runtime.
         """
         self.log["optim_start_time"] = time.time()
         self.embeddings = []
