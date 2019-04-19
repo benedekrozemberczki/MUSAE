@@ -12,11 +12,13 @@ from utils import load_graph, load_features, create_documents
 
 class MUSAE:
     """
+    Multi-Scale Attributed Embedding class.
+    For details see the paper: 
     """
     def __init__(self, args):
         """
-        MUSAE machine constructor.
-        :param args: Arguments object with the model hyperparameters. 
+        MUSAE and AE machine constructor.
+        :param args: Arguments object with the model hyperparameters.
         """
         self.args = args
         self.log = dict()
@@ -25,7 +27,8 @@ class MUSAE:
 
     def do_sampling(self):
         """
-        
+        Running a first or second-order random walk sampler.
+        Measuring the sampling runtime.
         """
         self.log["walk_start_time"] = time.time()
         if self.args.sampling == "second":
