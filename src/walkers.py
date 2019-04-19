@@ -15,8 +15,8 @@ class SecondOrderRandomWalker:
     def __init__(self, G, p, q, num_walks, walk_length):
         """
         :param G: NetworkX graph object.
-        :param p:
-        :param q:
+        :param p: Return parameter.
+        :param q: In-out parameter.
         :param num_walks: Number of walks per source node.
         :param walk_length: Random walk length.
         """
@@ -193,5 +193,3 @@ class FirstOrderRandomWalker:
             for node in trange(self.G.number_of_nodes(), desc='Nodes: '):
                 walk_from_node = self.do_walk(node)
                 self.walks.append(walk_from_node)
-
-
