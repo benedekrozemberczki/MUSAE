@@ -30,10 +30,9 @@ This repository provides a Gensim implementation of MUSAE and AE as described in
 If you find MUSAE useful in your research, please consider citing the following paper:
 
 >@misc{1802.03997,    
-       author = {Benedek Rozemberczki and Ryan Davies and Rik Sarkar and Charles Sutton},    
-       title = {GEMSEC: Graph Embedding with Self Clustering},   
-       year = {2018},    
-       eprint = {arXiv:1802.03997}
+       author = {Benedek Rozemberczki, Carl Allen and Rik Sarkar},    
+       title = {Jump Around! Multi-scale Attributed Node Embedding},   
+       year = {2019}
        }
 
 ### Requirements
