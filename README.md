@@ -13,7 +13,7 @@ This repository provides a Gensim implementation of MUSAE and AE as described in
 > Jump Around! Multi-scale Attributed Node Embedding.
 > [Benedek Rozemberczki](http://homepages.inf.ed.ac.uk/s1668259/), [Carl Allen](https://scholar.google.com/citations?user=wRcURR8AAAAJ&hl=en&oi=sra), [Rik Sarkar](https://homepages.inf.ed.ac.uk/rsarkar/)
 > Arxiv, 2019.
-> [[Paper]](https://benito.hu)
+> [[Paper]](https://github.com/benedekrozemberczki/MUSAE/blob/master/musae_paper.pdf)
 
 
 ### Table of Contents
