@@ -1,6 +1,6 @@
 MUSAE
 ============================================
-The reference implementation of "Jump Around! Multi-scale Attributed Node Embedding."
+The reference implementation of "Multi-scale Attributed Embedding of Networks."
 <p align="center">
   <img width="800" src="musae.jpg">
 </p>
@@ -10,7 +10,7 @@ We present algorithms that embed nodes of a network into a Euclidean feature spa
 The second-order random walks sampling methods were taken from the reference implementation of [Node2Vec](https://github.com/aditya-grover/node2vec).
 
 This repository provides a Gensim implementation of MUSAE and AE as described in the paper:
-> Jump Around! Multi-scale Attributed Node Embedding.
+> Multi-scale Attributed Embedding of Networks.
 > [Benedek Rozemberczki](http://homepages.inf.ed.ac.uk/s1668259/), [Carl Allen](https://scholar.google.com/citations?user=wRcURR8AAAAJ&hl=en&oi=sra), [Rik Sarkar](https://homepages.inf.ed.ac.uk/rsarkar/)
 > Arxiv, 2019.
 > [[Paper]](https://github.com/benedekrozemberczki/MUSAE/blob/master/musae_paper.pdf)
