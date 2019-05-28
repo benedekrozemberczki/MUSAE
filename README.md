@@ -1,4 +1,4 @@
-MUSAE
+MUSAE <img src="https://img.shields.io/badge/license-MIT-blue.svg"/>
 ============================================
 The reference implementation of "Multi-scale Attributed Embedding of Networks."
 <p align="center">
