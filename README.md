@@ -4,9 +4,10 @@ The reference implementation of "Multi-scale Attributed Embedding of Networks."
 <p align="center">
   <img width="800" src="musae.jpg">
 </p>
-<p align="justify">
-  
+
 ### Abstract
+
+<p align="justify">
 
 We present algorithms that embed nodes of a network into a Euclidean feature space based on attributes in their neighborhoods. The algorithms operate in the Skip-gram style of observing nearby contexts in random walks and optimizing node representations to align with the observed attributes. We describe a mult-scale embedding algorithm that simultaneously incorporate neighborhoods of multiple sizes into the embedding procedure. Theoretical analysis shows that this approach can be seen as the implicit approximate factorization of a matrix incorporating connectivity and attribute information. The attribute neighborhood perspective at multiple scales allows diverse applications, including latent feature identification across different networks with similar attributes. Experimental results show that the algorithm performs accurately on common social networks, is robust and computationally efficient.</p>
 
