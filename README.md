@@ -1,5 +1,4 @@
 MUSAE ![GitHub stars](https://img.shields.io/github/stars/benedekrozemberczki/MUSAE.svg?style=plastic) ![GitHub forks](https://img.shields.io/github/forks/benedekrozemberczki/MUSAE.svg?color=blue&style=plastic) ![License](https://img.shields.io/github/license/benedekrozemberczki/MUSAE.svg?color=blue&style=plastic)
-
 ============================================
 The reference implementation of "Multi-scale Attributed Embedding of Networks."
 <p align="center">
