@@ -39,7 +39,7 @@ If you find MUSAE useful in your research, please consider citing the following 
     eprint={1909.13021},
     archivePrefix={arXiv},
     primaryClass={cs.LG}
-}
+    }
 
 ### Requirements
 The codebase is implemented in Python 3.5.2. package versions used for development are just below.
