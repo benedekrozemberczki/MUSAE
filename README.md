@@ -12,11 +12,11 @@ We present network embedding algorithms that capture information about a node fr
 
 The second-order random walks sampling methods were taken from the reference implementation of [Node2Vec](https://github.com/aditya-grover/node2vec).
 
-This repository provides a Gensim implementation of MUSAE and AE as described in the paper:
-> Multi-scale Attributed Embedding of Networks.
-> [Benedek Rozemberczki](http://homepages.inf.ed.ac.uk/s1668259/), [Carl Allen](https://scholar.google.com/citations?user=wRcURR8AAAAJ&hl=en&oi=sra), [Rik Sarkar](https://homepages.inf.ed.ac.uk/rsarkar/)
-> Arxiv, 2019.
-> [[Paper]](https://github.com/benedekrozemberczki/MUSAE/blob/master/musae_paper.pdf)
+This repository provides the reference implementations for MUSAE and AE as described in the paper:
+> Multi-scale Attributed Node Embedding.
+> [Benedek Rozemberczki](http://homepages.inf.ed.ac.uk/s1668259/), [Carl Allen](http://homepages.inf.ed.ac.uk/s1577741/), and [Rik Sarkar](https://homepages.inf.ed.ac.uk/rsarkar/).
+> arXiv, 2019.
+> https://arxiv.org/abs/1909.13021
 
 
 ### Table of Contents
