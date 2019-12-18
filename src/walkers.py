@@ -186,7 +186,7 @@ class FirstOrderRandomWalker:
         for step in range(self.walk_length-1):
             nebs = [node for node in self.G.neighbors(walk[-1])]
             if len(nebs)>0:
-                walk = walk + random.sample(nebs,1) 
+                walk.append(random.choice(nebs)) 
         walk = [str(x) for x in walk]
         return walk
 

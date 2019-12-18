@@ -26,7 +26,7 @@ def load_graph(graph_path):
     edges = data.values.tolist()
     edges = [[int(edge[0]),int(edge[1])] for edge in edges]
     graph = nx.from_edgelist(edges)
-    graph.remove_edges_from(graph.selfloop_edges())
+    graph.remove_edges_from(nx.selfloop_edges(graph))
     return graph
 
 def load_features(features_path):

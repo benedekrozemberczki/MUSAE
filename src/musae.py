@@ -1,10 +1,9 @@
+"""MUSAE model class."""
+
 import json
 import time
-import random
-import logging
 import numpy as np
 import pandas as pd
-import networkx as nx
 from tqdm import tqdm
 from gensim.models.doc2vec import Doc2Vec
 from walkers import FirstOrderRandomWalker, SecondOrderRandomWalker
@@ -13,7 +12,9 @@ from utils import load_graph, load_features, create_documents
 class MUSAE:
     """
     Multi-Scale Attributed Embedding class.
-    For details see the paper: 
+    For details see the paper:
+    Multi-scale Attributed Node Embedding, Benedek Rozemberczki, Carl Allen, Rik Sarkar
+    https://arxiv.org/abs/1909.13021
     """
     def __init__(self, args):
         """
@@ -32,9 +33,15 @@ class MUSAE:
         """
         self.log["walk_start_time"] = time.time()
         if self.args.sampling == "second":
-            self.sampler = SecondOrderRandomWalker(self.graph, self.args.P, self.args.Q,  self.args.walk_number, self.args.walk_length)
+            self.sampler = SecondOrderRandomWalker(self.graph,
+                                                   self.args.P,
+                                                   self.args.Q,
+                                                   self.args.walk_number,
+                                                   self.args.walk_length)
         else:
-            self.sampler = FirstOrderRandomWalker(self.graph, self.args.walk_number, self.args.walk_length)
+            self.sampler = FirstOrderRandomWalker(self.graph,
+                                                  self.args.walk_number,
+                                                  self.args.walk_length)
         self.walks = self.sampler.walks
         del self.sampler
         self.log["walk_end_time"] = time.time()
@@ -47,22 +54,30 @@ class MUSAE:
         """
         print("\nLearning the embedding.")
         document_collections = create_documents(features)
-        
-        model = Doc2Vec(document_collections,
-                        vector_size = self.args.dimensions,
-                        window = 0, 
-                        min_count = self.args.min_count,
-                        alpha = self.args.alpha,
-                        dm = 0,
-                        negative = self.args.negative_samples,
-                        ns_exponent = self.args.exponent,
-                        min_alpha = self.args.min_alpha,
-                        sample = self.args.down_sampling,
-                        workers = self.args.workers,
-                        epochs = self.args.epochs)
 
-        embedding = np.array([model.docvecs[str(node)] for node in range(self.graph.number_of_nodes())])
-        return embedding
+        model = Doc2Vec(document_collections,
+                        vector_size=self.args.dimensions,
+                        window=0,
+                        min_count=self.args.min_count,
+                        alpha=self.args.alpha,
+                        dm=0,
+                        negative=self.args.negative_samples,
+                        ns_exponent=self.args.exponent,
+                        min_alpha=self.args.min_alpha,
+                        sample=self.args.down_sampling,
+                        workers=self.args.workers,
+                        epochs=self.args.epochs)
+
+        emb = np.array([model.docvecs[str(n)] for n in range(self.graph.number_of_nodes())])
+        return emb
+
+
+    def _create_documents(self, features):
+        print("Creating documents.")
+        features_out = {}
+        for node, feature_set in tqdm(features.items(), total=len(features)):
+            features_out[str(node)] = [feat for feat_elems in feature_set for feat in feat_elems]
+        return features_out
 
     def _setup_musae_features(self, approximation):
         """
@@ -70,7 +85,7 @@ class MUSAE:
         :param approximation: Approximation-order.
         :return features: Feature hash-table.
         """
-        features = {str(node):[] for node in self.graph.nodes()}
+        features = {str(node): [] for node in self.graph.nodes()}
         print("Processing attributed walks.")
         for walk in tqdm(self.walks):
             for i in range(len(walk)-approximation):
@@ -78,9 +93,8 @@ class MUSAE:
                 target = walk[i+approximation]
                 features[str(source)].append(self.features[str(target)])
                 features[str(target)].append(self.features[str(source)])
-        print("Creating documents.")
-        features = {str(node): [feature for feature_elems in feature_set for feature in feature_elems] for node, feature_set in tqdm(features.items(), total = len(features))}
-        return features
+
+        return self._create_documents(features)
 
     def _setup_ae_features(self):
         """
@@ -96,9 +110,8 @@ class MUSAE:
                     target = walk[i+j+1]
                     features[str(source)].append(self.features[str(target)])
                     features[str(target)].append(self.features[str(source)])
-        print("Creating documents.")
-        features = {str(node): [feature for feature_elems in feature_set for feature in feature_elems] for node, feature_set in tqdm(features.items(), total = len(features))}
-        return features
+
+        return self._create_documents(features)
 
     def _print_approximation_order(self, approximation):
         """
@@ -138,7 +151,7 @@ class MUSAE:
             self._learn_musae_embedding()
         else:
             self._learn_ae_embedding()
-        self.embeddings = np.concatenate(self.embeddings, axis = 1)
+        self.embeddings = np.concatenate(self.embeddings, axis=1)
         self.log["optim_end_time"] = time.time()
 
     def save_embedding(self):
@@ -146,16 +159,16 @@ class MUSAE:
         Method to save the embedding.
         """
         print("\nSaving embedding.\n")
-        columns = ["id"] + ["x_" +str(x) for x in range(self.embeddings.shape[1])]
-        ids = np.array(range(self.embeddings.shape[0])).reshape(-1,1)
-        self.embeddings = np.concatenate([ids, self.embeddings], axis = 1)
-        self.embeddings = pd.DataFrame(self.embeddings, columns = columns)
-        self.embeddings.to_csv(self.args.output, index = None)
+        columns = ["id"] + ["x_"+str(x) for x in range(self.embeddings.shape[1])]
+        ids = np.array(range(self.embeddings.shape[0])).reshape(-1, 1)
+        self.embeddings = np.concatenate([ids, self.embeddings], axis=1)
+        self.embeddings = pd.DataFrame(self.embeddings, columns=columns)
+        self.embeddings.to_csv(self.args.output, index=None)
 
     def save_logs(self):
         """
         Method to save the logs.
         """
         print("Saving the logs.")
-        with open(self.args.log,"w") as f:
-            json.dump(self.log,f)
+        with open(self.args.log, "w") as f:
+            json.dump(self.log, f)
