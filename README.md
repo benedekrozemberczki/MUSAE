@@ -44,7 +44,7 @@ If you find MUSAE useful in your research, please consider citing the following 
 ### Requirements
 The codebase is implemented in Python 3.5.2. package versions used for development are just below.
 ```
-networkx          1.11
+networkx          2.4
 tqdm              4.28.1
 numpy             1.15.4
 pandas            0.23.4
