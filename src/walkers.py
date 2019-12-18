@@ -86,7 +86,7 @@ class SecondOrderRandomWalker:
             else:
                 unnormalized_probs.append(G[dst][dst_nbr]['weight']/q)
         norm_const = sum(unnormalized_probs)
-        normalized_probs =  [float(u_prob)/norm_const for u_prob in unnormalized_probs]
+        normalized_probs = [float(u_prob)/norm_const for u_prob in unnormalized_probs]
 
         return alias_setup(normalized_probs)
 
@@ -100,10 +100,10 @@ class SecondOrderRandomWalker:
         print("")
         print("Preprocesing.\n")
         for node in tqdm(G.nodes()):
-             unnormalized_probs = [G[node][nbr]['weight'] for nbr in sorted(G.neighbors(node))]
-             norm_const = sum(unnormalized_probs)
-             normalized_probs =  [float(u_prob)/norm_const for u_prob in unnormalized_probs]
-             alias_nodes[node] = alias_setup(normalized_probs)
+            unnormalized_probs = [G[node][nbr]['weight'] for nbr in sorted(G.neighbors(node))]
+            norm_const = sum(unnormalized_probs)
+            normalized_probs = [float(u_prob)/norm_const for u_prob in unnormalized_probs]
+            alias_nodes[node] = alias_setup(normalized_probs)
 
         alias_edges = {}
         triads = {}
@@ -183,10 +183,12 @@ class FirstOrderRandomWalker:
         :return walk: A single random walk.
         """
         walk = [node]
-        for step in range(self.walk_length-1):
+        for _ in range(self.walk_length-1):
             nebs = [node for node in self.G.neighbors(walk[-1])]
-            if len(nebs)>0:
-                walk.append(random.choice(nebs)) 
+            if len(nebs) > 0:
+                walk.append(random.choice(nebs))
+            else:
+                break
         walk = [str(x) for x in walk]
         return walk
 
@@ -195,7 +197,7 @@ class FirstOrderRandomWalker:
         Doing a fixed number of truncated random walk from every node in the graph.
         """
         self.walks = []
-        for iteration in trange(self.num_walks, desc='Walk series: '):
+        for _ in trange(self.num_walks, desc='Walk series: '):
             for node in trange(self.G.number_of_nodes(), desc='Nodes: '):
                 walk_from_node = self.do_walk(node)
                 self.walks.append(walk_from_node)

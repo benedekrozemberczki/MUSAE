@@ -1,5 +1,6 @@
+"""Reading data and printing."""
+
 import json
-import random
 import pandas as pd
 import networkx as nx
 from texttable import Texttable
@@ -12,8 +13,9 @@ def tab_printer(args):
     """
     args = vars(args)
     keys = sorted(args.keys())
-    t = Texttable() 
-    t.add_rows([["Parameter", "Value"]] + [[k.replace("_"," ").capitalize(),args[k]] for k in keys])
+    t = Texttable()
+    t.add_rows([["Parameter", "Value"]])
+    t.add_rows([[k.replace("_", " ").capitalize(), args[k]] for k in keys])
     print(t.draw())
 
 def load_graph(graph_path):
@@ -24,7 +26,7 @@ def load_graph(graph_path):
     """
     data = pd.read_csv(graph_path)
     edges = data.values.tolist()
-    edges = [[int(edge[0]),int(edge[1])] for edge in edges]
+    edges = [[int(edge[0]), int(edge[1])] for edge in edges]
     graph = nx.from_edgelist(edges)
     graph.remove_edges_from(nx.selfloop_edges(graph))
     return graph
@@ -36,7 +38,7 @@ def load_features(features_path):
     :return features: Feature hash table.
     """
     features = json.load(open(features_path))
-    features = {str(k): [str(val) for val in v] for k,v in features.items()}
+    features = {str(k): [str(val) for val in v] for k, v in features.items()}
     return features
 
 def create_documents(features):
@@ -45,5 +47,5 @@ def create_documents(features):
     :param features: Feature hash table - keys are nodes, values are feature lists.
     :return docs: Tagged Documents list.
     """
-    docs = [TaggedDocument(words = v, tags = [str(k)]) for k, v in features.items()]
+    docs = [TaggedDocument(words=v, tags=[str(k)]) for k, v in features.items()]
     return docs
