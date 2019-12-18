@@ -1,3 +1,5 @@
+"""Running MUSAE."""
+
 from musae import MUSAE
 from utils import tab_printer
 from parser import parameter_parser
