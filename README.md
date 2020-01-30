@@ -33,7 +33,7 @@ This repository provides the reference implementations for MUSAE and AE as descr
 ### Citing
 
 If you find MUSAE useful in your research, please consider citing the following paper:
-
+```bibtex
 >@misc{rozemberczki2019multiscale,    
        title = {Multi-scale Attributed Node Embedding},   
        author = {Benedek Rozemberczki and Carl Allen and Rik Sarkar},   
@@ -42,7 +42,7 @@ If you find MUSAE useful in your research, please consider citing the following 
        archivePrefix = {arXiv},  
        primaryClass = {cs.LG}   
        }
-
+```
 ### Requirements
 The codebase is implemented in Python 3.5.2. package versions used for development are just below.
 ```
