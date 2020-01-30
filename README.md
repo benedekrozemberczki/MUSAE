@@ -112,10 +112,10 @@ Learning of the embedding is handled by the `src/main.py` script which provides 
 </p>
 
 Training a MUSAE model for a 10 epochs.
-```
+```sh
 python src/main.py --epochs 10
 ```
 Changing the dimension size.
-```
+```sh
 python src/main.py --dimensions 32
 ```
