@@ -1,4 +1,4 @@
-MUSAE ![GitHub stars](https://img.shields.io/github/stars/benedekrozemberczki/MUSAE.svg?style=plastic) ![GitHub forks](https://img.shields.io/github/forks/benedekrozemberczki/MUSAE.svg?color=blue&style=plastic) ![Arxiv](https://img.shields.io/badge/ArXiv-1909.13021-orange.svg?color=blue&style=plastic)
+MUSAE ![GitHub stars](https://img.shields.io/github/stars/benedekrozemberczki/MUSAE.svg?style=plastic) ![GitHub forks](https://img.shields.io/github/forks/benedekrozemberczki/MUSAE.svg?color=blue&style=plastic) [![Arxiv](https://img.shields.io/badge/ArXiv-1909.13021-orange.svg?color=blue&style=plastic)](https://arxiv.org/abs/1909.13021)
 ============================================
 The reference implementation of "Multi-scale Attributed Node Embedding."
 <p align="center">
