@@ -94,7 +94,7 @@ Learning of the embedding is handled by the `src/main.py` script which provides 
 #### Model options
 
 ```
-  --model                 STR        Pooled or multi-scla model (AE/MUSAE).       Default is `musae`.
+  --model                 STR        Pooled or multi-scale model (AE/MUSAE).      Default is `musae`.
   --base-model            STR        Use of Doc2Vec base model.                   Default is `null`.
   --approximation-order   INT        Matrix powers approximated.                  Default is 3.
   --dimensions            INT        Number of dimensions.                        Default is 32.
