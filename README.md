@@ -71,7 +71,7 @@ The models are defined in a way that parameter settings and runtimes are logged.
 
 ### Options
 
-Learning of the embedding is handled by the `src/main.py` script which provides the following command line arguments.
+Learning the embedding is handled by the `src/main.py` script which provides the following command line arguments.
 
 #### Input and output options
 
