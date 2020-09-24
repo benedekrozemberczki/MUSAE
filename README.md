@@ -2,7 +2,7 @@ MUSAE
 ============================================
 [![Arxiv](https://img.shields.io/badge/ArXiv-1909.13021-orange.svg?color=blue&style=plastic)](https://arxiv.org/abs/1909.13021) [![codebeat badge](https://codebeat.co/badges/5aef8ac3-08bf-44b9-94ec-929778ec3b94)](https://codebeat.co/projects/github-com-benedekrozemberczki-musae-master)
 
-The reference implementation of "Multi-scale Attributed Node Embedding."
+The reference implementation of **Multi-Scale Attributed Node Embedding.**
 <p align="center">
   <img width="800" src="musae.jpg">
 </p>
