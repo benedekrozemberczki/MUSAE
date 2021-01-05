@@ -123,3 +123,8 @@ Changing the dimension size.
 ```sh
 $ python src/main.py --dimensions 32
 ```
+--------------------------------------------------------------------------------
+
+**License**
+
+- [GNU](https://github.com/benedekrozemberczki/MUSAE/blob/master/LICENSE)
