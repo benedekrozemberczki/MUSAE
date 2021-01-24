@@ -1,6 +1,6 @@
 MUSAE
 ============================================
-[![Arxiv](https://img.shields.io/badge/ArXiv-1909.13021-orange.svg)](https://arxiv.org/abs/1909.13021) [![codebeat badge](https://codebeat.co/badges/5aef8ac3-08bf-44b9-94ec-929778ec3b94)](https://codebeat.co/projects/github-com-benedekrozemberczki-musae-master) [![repo size](https://img.shields.io/github/repo-size/benedekrozemberczki/MUSAE.svg)](https://github.com/benedekrozemberczki/MUSAE/archive/master.zip)
+[![Arxiv](https://img.shields.io/badge/ArXiv-1909.13021-orange.svg)](https://arxiv.org/abs/1909.13021) [![codebeat badge](https://codebeat.co/badges/5aef8ac3-08bf-44b9-94ec-929778ec3b94)](https://codebeat.co/projects/github-com-benedekrozemberczki-musae-master) [![repo size](https://img.shields.io/github/repo-size/benedekrozemberczki/MUSAE.svg)](https://github.com/benedekrozemberczki/MUSAE/archive/master.zip)⠀
 
 The reference implementation of **Multi-Scale Attributed Node Embedding.**
 <p align="center">
