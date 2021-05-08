@@ -40,7 +40,7 @@ If you find MUSAE useful in your research, please consider citing the following 
 ```bibtex
 >@article{musae,
           author = {Rozemberczki, Benedek and Allen, Carl and Sarkar, Rik},
-          title = "{Multi-Scale attributed node embedding}",
+          title = {Multi-Scale Attributed Node Embedding},
           journal = {Journal of Complex Networks},
           volume = {9},
           number = {2},
