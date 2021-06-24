@@ -1,5 +1,5 @@
 MUSAE
-============================================
+============
 [![Arxiv](https://img.shields.io/badge/ArXiv-1909.13021-orange.svg)](https://arxiv.org/abs/1909.13021) [![codebeat badge](https://codebeat.co/badges/5aef8ac3-08bf-44b9-94ec-929778ec3b94)](https://codebeat.co/projects/github-com-benedekrozemberczki-musae-master) [![repo size](https://img.shields.io/github/repo-size/benedekrozemberczki/MUSAE.svg)](https://github.com/benedekrozemberczki/MUSAE/archive/master.zip)⠀[![benedekrozemberczki](https://img.shields.io/twitter/follow/benrozemberczki?style=social&logo=twitter)](https://twitter.com/intent/follow?screen_name=benrozemberczki)⠀
 
 The reference implementation of **Multi-Scale Attributed Node Embedding. (Journal of Complex Networks 2021)**
