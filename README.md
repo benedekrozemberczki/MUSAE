@@ -122,7 +122,7 @@ Changing the dimension size.
 ```sh
 $ python src/main.py --dimensions 32
 ```
------------------------------------
+------------------------------
 
 **License**
 
